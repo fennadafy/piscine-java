@@ -2,8 +2,8 @@
 public class Palindrome {
 
     public static boolean isPalindrome(String s) {
-        String first_part = s.substring(0, s.length() / 2);
-        String last_part = (s.length() % 2 == 0) ? s.substring(s.length() / 2, s.length()) : s.substring(s.length() / 2 + 1, s.length());
+        String first_part = s.toLowerCase().substring(0, s.length() / 2);
+        String last_part = (s.length() % 2 == 0) ? s.toLowerCase().substring(s.length() / 2, s.length()) : s.toLowerCase().substring(s.length() / 2 + 1, s.length());
         // System.out.println(first_part);
         // System.out.println(reverce(last_part));
         // if (first_part == reverce(last_part)){
