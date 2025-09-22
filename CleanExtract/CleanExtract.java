@@ -32,12 +32,13 @@ public class CleanExtract {
             }
 
             result = result + tomp;
-            if (!tomp.isEmpty() && tomp.charAt(tomp.length() - 1) != ' ') {
+            if (!tomp.isEmpty() && tomp.charAt(tomp.length() - 1) != ' '&& tomp.charAt(tomp.length() - 1) != '.' ) {
                 result = result + " ";
             }
             arr_length++;
             tomp = "";
         }
+        // System.out.println(result.length());
         return result;
     }
 }
