@@ -7,7 +7,7 @@ public class DoOp {
         int first = 0;
         int sec = 0;
         if (args.length == 0 ){
-            return result ;
+            return "Error" ;
         }
         first = Integer.parseInt(args[0]);
 
