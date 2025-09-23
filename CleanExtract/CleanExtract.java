@@ -32,8 +32,6 @@ public class CleanExtract {
             }
 
             result = result + tomp;
-            // System.out.println(arr_length);
-            // System.out.println( arr.length - 1);
             if (!tomp.isEmpty() && tomp.charAt(tomp.length() - 1) != ' ' && tomp.charAt(tomp.length() - 1) != '.' && arr_length != arr.length - 1) {
                 result = result + " ";
             }

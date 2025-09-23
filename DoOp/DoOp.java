@@ -9,7 +9,11 @@ public class DoOp {
         int first = Integer.parseInt(args[0]);
         String operation = args[1];
         int sec = Integer.parseInt(args[2]);
-        // System.out.println(operation);
+
+        //     return switch (operation) {
+        //     case "+" -> Integer.toString(first + sec);
+        //     default -> "Err";
+        // }; 
         if (operation == "+") {
             return Integer.toString(first + sec);
         } else if (operation == "-") {

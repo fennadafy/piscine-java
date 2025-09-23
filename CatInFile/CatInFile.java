@@ -10,7 +10,6 @@ public class CatInFile {
             try {
 
                 fileOutputStream = new FileOutputStream(path);
-
                 byte[] buffer = new byte[100];
                 int byteRead;
                 while ((byteRead = br.read(buffer)) != -1) {
