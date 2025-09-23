@@ -22,6 +22,13 @@ public class DoOp {
                 return "Error";
             }
             return  Integer.toString(first % sec);
+        }else if (operation == "*"){
+            return  Integer.toString(first * sec);
+        }else if (operation == "/"){
+             if (sec == 0) {
+                return "Error";
+            }
+            return Integer.toString(first / sec);
         }
         return result;
     }
