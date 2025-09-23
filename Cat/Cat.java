@@ -4,14 +4,13 @@ import java.io.*;
 
 public class Cat {
 
-
     public static void cat(String[] args) throws IOException {
 
         for (String path : args) {
-            try (FileInputStream fis = new FileInputStream(path)){
-                int byteRead ;
-                while ((byteRead = fis.read()) != -1) { 
-                    System.out.print((char ) byteRead);
+            try (FileInputStream fis = new FileInputStream(path)) {
+                int byteRead;
+                while ((byteRead = fis.read()) != -1) {
+                    System.out.write(byteRead);
                 }
             }
         }
