@@ -2,10 +2,10 @@
 public class ComputeArray {
 
     public static int[] computeArray(int[] array) {
-        int[] result = new int[array.length];
-        if (array == null ){
-            return result;
+        if (array == null){
+            return null;
         }
+        int[] result = new int[array.length];
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 3 == 0) {
                 result[i] = array[i] * 5;
