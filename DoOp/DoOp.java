@@ -2,16 +2,14 @@
 public class DoOp {
 
     public static String operate(String[] args) {
-         if (args.length != 3) {
+        if (args.length != 3) {
             return "Error";
         }
 
-        String result = "";
-        String operation = args[1];
         int first = Integer.parseInt(args[0]);
-        int sec =  Integer.parseInt(args[2]);
-        
-        
+        String operation = args[1];
+        int sec = Integer.parseInt(args[2]);
+        // System.out.println(operation);
         if (operation == "+") {
             return Integer.toString(first + sec);
         } else if (operation == "-") {
@@ -29,6 +27,6 @@ public class DoOp {
             }
             return Integer.toString(first / sec);
         }
-        return result;
+        return "Error";
     }
 }
