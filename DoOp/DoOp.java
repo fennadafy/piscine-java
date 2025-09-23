@@ -13,8 +13,9 @@ public class DoOp {
         if (args.length == 2) {
             operation = args[1];
         }
-
-        sec = Integer.parseInt(args[2]);
+        if (args.length == 3) {
+            sec = Integer.parseInt(args[2]);
+        }
 
         if (operation == "+") {
             return Integer.toString(first + sec);
