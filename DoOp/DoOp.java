@@ -6,7 +6,9 @@ public class DoOp {
         String operation = "";
         int first = 0;
         int sec = 0;
-
+        if (args.length == 0 ){
+            return result ;
+        }
         first = Integer.parseInt(args[0]);
 
         operation = args[1];
