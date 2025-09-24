@@ -21,7 +21,7 @@ public class Capitalize {
                 // System.out.print(word);
                 if (!word.isEmpty()) {
                     String firstLetter = word.substring(0, 1).toUpperCase();
-                    String remainingLetter = word.substring(1);
+                    String remainingLetter = word.substring(1).toLowerCase();
                     capitalaizedString.append(firstLetter).append(remainingLetter).append(" ");
                 }
             }
