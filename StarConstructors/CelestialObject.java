@@ -1,3 +1,4 @@
+
 public class CelestialObject {
 
     public double x;
