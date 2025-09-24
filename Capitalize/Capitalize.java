@@ -7,7 +7,7 @@ public class Capitalize {
         int bytesToRead = 100;
         byte[] filecontent = null;
         try (FileInputStream fis = new FileInputStream(args[0]); ByteArrayOutputStream bos = new ByteArrayOutputStream()) {
-            byte[] buffer = new byte[bytesToRead]; // Buffer for reading chunks of data
+            byte[] buffer = new byte[bytesToRead]; // Buffer for reading data
             int byteRead;
             // Read bytes from the file into the buffer and write to ByteArrayOutputStream
             while ((byteRead = fis.read(buffer, 0, bytesToRead)) != -1) {
