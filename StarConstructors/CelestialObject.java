@@ -13,7 +13,7 @@ public class CelestialObject {
         name = "Soleil";
     }
 
-    CelestialObject(String name1, double x1, double y1, double z1) {
+    public CelestialObject(String name1, double x1, double y1, double z1) {
         x = x1;
         y = y1;
         z = z1;
