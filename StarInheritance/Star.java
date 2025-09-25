@@ -1,5 +1,5 @@
 
-class Star extends CelestialObject {
+public class Star extends CelestialObject {
 
     private double magnitude;
 
