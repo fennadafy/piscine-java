@@ -83,9 +83,9 @@ public class CelestialObject {
 
     public int hashCode() {
         int result = name == null ? 0 : name.hashCode();
-        result = 31 * result + (int) x;
-        result = 31 * result + (int) y;
-        result = 31 * result + (int) z;
+        result = 31 * result + Double.hashCode(x);
+        result = 31 * result + Double.hashCode(y);
+        result = 31 * result + Double.hashCode(z);
         return result;
     }
 }
