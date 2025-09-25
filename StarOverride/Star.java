@@ -38,7 +38,7 @@ public class Star extends CelestialObject {
 
     @Override
     public int hashCode() {
-        int result =  super.hashCode() +31 * 1 + Double.hashCode(magnitude);
+        int result = 31 * super.hashCode() + Double.hashCode(magnitude);
         return result;
     }
 
@@ -52,6 +52,6 @@ public class Star extends CelestialObject {
         }
         Star object = (Star) obj;
 
-        return this.x == object.x && this.y == object.y && this.z == object.z && this.name.equals(object.name) && this.magnitude == object.magnitude;
+        return this.magnitude == object.magnitude;
     }
 }
