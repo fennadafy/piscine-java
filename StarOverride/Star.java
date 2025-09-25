@@ -52,6 +52,6 @@ public class Star extends CelestialObject {
         }
         Star object = (Star) obj;
 
-        return this.x == object.x && this.y == object.y && this.z == object.z && this.name == object.name && this.magnitude == object.magnitude;
+        return this.x == object.x && this.y == object.y && this.z == object.z && this.name.equals(object.name) && this.magnitude == object.magnitude;
     }
 }
