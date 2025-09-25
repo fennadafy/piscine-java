@@ -44,14 +44,18 @@ public class Star extends CelestialObject {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
+        //   Identity check (performance optimization)
+        if(this ==obj){
             return true;
         }
-        if (obj == null || getClass() != obj.getClass()) {
+       // 2. Type check and null check (using instanceof)
+        if (!(obj instanceof CelestialObject)){
             return false;
         }
-        Star object = (Star) obj;
-
-        return this.magnitude == object.magnitude;
+         // 3. Cast to the correct type
+        Star others = (Star) obj;
+        // 4. Field-by-field comparison
+        return this.magnitude == others.magnitude;
     }
 }
+   
