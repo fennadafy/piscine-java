@@ -65,7 +65,8 @@ public class CelestialObject {
     public static double KM_IN_ONE_AU = 150000000;
 
     public String toString() {
-        return getName() + " is positioned at (" + getX() + ", " + getY() + ", " + getZ() + ")";
+        // return getName() + " is positioned at (" + getX() + ", " + getY() + ", " + getZ() + ")";
+        return String.format("%s is positioned at (%.3f, %.3f, %.3f)",getName() , getX() , getY() , getZ());
     }
 
     public boolean equals(Object obj) {
