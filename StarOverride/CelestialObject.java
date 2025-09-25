@@ -77,7 +77,7 @@ public class CelestialObject {
         }
         CelestialObject object = (CelestialObject) obj;
 
-        return this.x == object.x && this.y == object.y && this.z == object.z && this.name == object.name;
+        return this.x == object.x && this.y == object.y && this.z == object.z && this.name.equals(object.name);
     }
 
     public int hashCode() {
