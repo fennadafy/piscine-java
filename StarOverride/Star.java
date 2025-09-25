@@ -49,7 +49,7 @@ public class Star extends CelestialObject {
             return true;
         }
        // 2. Type check and null check (using instanceof)
-        if (!(obj instanceof CelestialObject)){
+        if (!(obj instanceof Star)){
             return false;
         }
          // 3. Cast to the correct type
