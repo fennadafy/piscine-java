@@ -8,6 +8,6 @@ public class ExerciseRunner {
         // defaultStar.getDistanceBetween(earth, earth);
         System.out.println(CelestialObject.getDistanceBetween(defaultStar, earth));
         System.out.println(CelestialObject.getDistanceBetweenInKm(defaultStar, earth));
-        // System.out.println(CelestialObject.KM_IN_ONE_AU);
+        System.out.println(CelestialObject.KM_IN_ONE_AU);
     }
 }

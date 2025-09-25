@@ -59,7 +59,8 @@ public class CelestialObject {
 
     public static double getDistanceBetweenInKm(CelestialObject obj1, CelestialObject obj2) {
         double res = Math.pow((obj2.x - obj1.x), 2) + Math.pow((obj2.y - obj1.y), 2) + Math.pow((obj2.z - obj1.z), 2);
-        
-        return Math.sqrt(res)*150000000 / 1000.0;
+        return Math.sqrt(res) * 150000000;
     }
+    //public constant double property
+    public static double KM_IN_ONE_AU = 150000000;
 }
