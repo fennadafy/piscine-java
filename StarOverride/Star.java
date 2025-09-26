@@ -15,11 +15,9 @@ public class Star extends CelestialObject {
     }
 
     public Star(String Sname, double Sx, double Sy, double Sz, double Smagnitude) {
-        x = Sx;
-        y = Sy;
-        z = Sz;
-        magnitude = Smagnitude;
-        name = Sname;
+        super(Sname, Sx, Sy, Sz);
+        this.magnitude = Smagnitude;
+
     }
 
     @Override
@@ -44,9 +42,9 @@ public class Star extends CelestialObject {
                     if (!(obj instanceof Star)) {
                         return false;
                     }
-                Star others = (Star) obj;
-                return this.magnitude == others.magnitude ;
-                    
+                    Star others = (Star) obj;
+                    return this.magnitude == others.magnitude;
+
                 }
                 // 3. Cast to the correct type
             }
