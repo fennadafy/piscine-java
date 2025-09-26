@@ -2,10 +2,6 @@
 public class Star extends CelestialObject {
 
     private double magnitude;
-    private double x;
-    private double y;
-    private double z;
-    private String name;
 
     public double getMagnitude() {
         return this.magnitude;
@@ -16,11 +12,6 @@ public class Star extends CelestialObject {
     }
 
     public Star() {
-        x = 0.0;
-        y = 0.0;
-        z = 0.0;
-        magnitude = 0.0;
-        name = "Soleil";
     }
 
     public Star(String Sname, double Sx, double Sy, double Sz, double Smagnitude) {
