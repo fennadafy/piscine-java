@@ -38,26 +38,29 @@ public class Star extends CelestialObject {
 
     @Override
     public int hashCode() {
-        int result = 31 * super.hashCode() + Double.hashCode(magnitude);
+        int result = super.hashCode() + Double.hashCode(this.magnitude);
         return result;
     }
 
     @Override
     public boolean equals(Object obj) {
-        //   Identity check (performance optimization)
-        if(this ==obj){
-            return true;
+
+        if (obj != null) {
+            if (super.equals(obj)) {
+                // 2. Type check and null check (using instanceof)
+
+                if (super.equals(obj)) {
+                    if (!(obj instanceof Star)) {
+                        return false;
+                    }
+                Star others = (Star) obj;
+                return this.magnitude == others.magnitude ;
+                    
+                }
+                // 3. Cast to the correct type
+            }
         }
-       // 2. Type check and null check (using instanceof)
-        if (!(obj instanceof Star)){
-            return false;
-        }
-         // 3. Cast to the correct type
-        Star others = (Star) obj;
-        // 4. Field-by-field comparison
-        
-        return this.magnitude == others.magnitude && this.x == others.x && this.y == others.y && this.z == others.z && this.name.equals(others.name);
+        return false;
 
     }
 }
-   

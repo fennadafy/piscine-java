@@ -65,26 +65,35 @@ public class CelestialObject {
     public static double KM_IN_ONE_AU = 150000000;
 
     public String toString() {
-        return String.format("%s is positioned at (%.3f, %.3f, %.3f)",getName() , getX() , getY() , getZ());
+        return String.format("%s is positioned at (%.3f, %.3f, %.3f)", getName(), getX(), getY(), getZ());
     }
 
+    @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
+        // if (this == obj) {
+        //     return true;
+        // }
+        // if (obj == null || getClass() != obj.getClass()) {
+        //     return false;
+        // }
         CelestialObject object = (CelestialObject) obj;
-
-        return this.x == object.x && this.y == object.y && this.z == object.z && this.name.equals(object.name);
+if(this.x == object.x && this.y == object.y && this.z == object.z && this.name == object.name){
+    return  true;
+}
+        return false;
     }
 
+    // @Override
+    // public int hashCode() {
+    //     int result = name == null ? 0 : this.name.hashCode();
+    //     result =result + Double.hashCode(this.x);
+    //     result =result + Double.hashCode(this.y);
+    //     result =result + Double.hashCode(this.z);
+    //     return result;
+    // }
+    @Override
     public int hashCode() {
-        int result = name == null ? 0 : this.name.hashCode();
-        result = 31 * result + Double.hashCode(this.x);
-        result = 31 * result + Double.hashCode(this.y);
-        result = 31 * result + Double.hashCode(this.z);
-        return result;
+        return this.name.hashCode() + Double.hashCode(this.x) + Double.hashCode(this.y) + Double.hashCode(this.z);
+
     }
 }
