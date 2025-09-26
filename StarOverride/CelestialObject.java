@@ -81,10 +81,10 @@ public class CelestialObject {
     }
 
     public int hashCode() {
-        int result = name == null ? 0 : name.hashCode();
-        result = 31 * result + Double.hashCode(x);
-        result = 31 * result + Double.hashCode(y);
-        result = 31 * result + Double.hashCode(z);
+        int result = name == null ? 0 : this.name.hashCode();
+        result = 31 * result + Double.hashCode(this.x);
+        result = 31 * result + Double.hashCode(this.y);
+        result = 31 * result + Double.hashCode(this.z);
         return result;
     }
 }
