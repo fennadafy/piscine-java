@@ -8,18 +8,18 @@ public class CelestialObject {
     public int mass;
 
     public CelestialObject() {
+        name = "Soleil";
         x = 0.0;
         y = 0.0;
         z = 0.0;
-        name = "Soleil";
         mass = 0;
     }
 
     public CelestialObject(String name1, double x1, double y1, double z1, Integer m) {
+        name = name1;
         x = x1;
         y = y1;
         z = z1;
-        name = name1;
         mass = m;
     }
 

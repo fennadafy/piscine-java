@@ -9,8 +9,7 @@ public class Galaxy {
     private List<CelestialObject> celestialObjects;
 
     public Galaxy() {
-        super();
-        this.celestialObjects = new ArrayList<>();
+        celestialObjects = new ArrayList<>();
     }
 
     public List<CelestialObject> getCelestialObjects() {
