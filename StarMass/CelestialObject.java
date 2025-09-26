@@ -5,7 +5,7 @@ public class CelestialObject {
     public double y;
     public double z;
     public String name;
-    public int mass;
+    private  int mass;
 
     public CelestialObject() {
         name = "Soleil";
