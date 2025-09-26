@@ -21,7 +21,8 @@ public class Planet extends CelestialObject {
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        int result = 1;
+        return super.hashCode() + 31 *result + centerStar.hashCode();
     }
 
     @Override

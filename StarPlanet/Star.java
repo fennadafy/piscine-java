@@ -36,17 +36,11 @@ public class Star extends CelestialObject {
 
         if (obj != null) {
             if (super.equals(obj)) {
-                // 2. Type check and null check (using instanceof)
-
-           
-                    if (!(obj instanceof Star)) {
-                        return false;
-                    }
-                    Star others = (Star) obj;
-                    return this.magnitude == others.magnitude;
-
-                
-                // 3. Cast to the correct type
+                if (!(obj instanceof Star)) {
+                    return false;
+                }
+                Star others = (Star) obj;
+                return this.magnitude == others.magnitude;
             }
         }
         return false;
