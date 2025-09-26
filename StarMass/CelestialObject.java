@@ -39,7 +39,7 @@ public class CelestialObject {
         return name;
     }
 
-    public int getmass() {
+    public int getMass() {
         return mass;
     }
 

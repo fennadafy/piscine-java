@@ -28,13 +28,13 @@ public class Galaxy {
         massRepartition.put("Star", 0);
         for (CelestialObject o : celestialObjects) {
             if (o instanceof Star) {
-                somme = massRepartition.get("Star") + o.getmass();
+                somme = massRepartition.get("Star") + o.getMass();
                 massRepartition.put("Star", somme);
             }else if (o instanceof Planet) {
-                somme = massRepartition.get("Planet") + o.getmass();
+                somme = massRepartition.get("Planet") + o.getMass();
                 massRepartition.put("Planet", somme);
             }else {
-                somme = massRepartition.get("Other") + o.getmass();
+                somme = massRepartition.get("Other") + o.getMass();
                 massRepartition.put("Other", somme);
             }
             
