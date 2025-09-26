@@ -20,25 +20,25 @@ public class Galaxy {
         celestialObjects.add(object);
     }
 
-    public Map<String, Integer> computeMassRepartition() {
-        Map<String, Integer> myMap = new HashMap<>();
-
-        double sumS = 0;
-        double sump = 0;
-        double sumO = 0;
-        for (CelestialObject obj : celestialObjects) {
-            if (obj instanceof Star) {
-                sumS = sumS + obj.mass;
-            }else if (obj instanceof Planet) {
-                sump = sump + obj.mass;
-            }else  {
-                sumO = sumO + obj.mass;
+     public Map<String, Integer> computeMassRepartition() {
+        Map<String, Integer> massRepartition = new HashMap<>();
+        int somme = 0;
+        massRepartition.put("Planet", 0);
+        massRepartition.put("Other", 0);
+        massRepartition.put("Star", 0);
+        for (CelestialObject o : celestialObjects) {
+            if (o instanceof Star) {
+                somme = massRepartition.get("Star") + o.getmass();
+                massRepartition.put("Star", somme);
+            }else if (o instanceof Planet) {
+                somme = massRepartition.get("Planet") + o.getmass();
+                massRepartition.put("Planet", somme);
+            }else {
+                somme = massRepartition.get("Other") + o.getmass();
+                massRepartition.put("Other", somme);
             }
+            
         }
-        myMap.put("Star" , (int) sumS);
-        myMap.put("Planet" , (int) sump);
-        myMap.put("Other" , (int) sumO);
-
-        return myMap;
+        return massRepartition;
     }
 }
