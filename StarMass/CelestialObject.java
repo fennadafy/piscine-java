@@ -59,7 +59,7 @@ public class CelestialObject {
         name = newName;
     }
 
-    public void setmass(int m) {
+    public void setMass(int m) {
         mass = m;
     }
 
