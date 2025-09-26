@@ -9,7 +9,8 @@ public class Galaxy {
     private List<CelestialObject> celestialObjects;
 
     public Galaxy() {
-        celestialObjects = new ArrayList<>();
+        super();
+        this.celestialObjects = new ArrayList<>();
     }
 
     public List<CelestialObject> getCelestialObjects() {
@@ -35,7 +36,6 @@ public class Galaxy {
                 sumO = sumO + obj.mass;
             }
         }
-            // System.out.println(sumO);
         myMap.put("Star" , (int) sumS);
         myMap.put("Planet" , (int) sump);
         myMap.put("Other" , (int) sumO);
