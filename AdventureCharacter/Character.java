@@ -34,6 +34,11 @@ public class Character {
     }
 
     public void takeDamage(int amount){
+        if (currentHealth - amount>0){
         this.currentHealth = currentHealth - amount;
+        }else{
+        this.currentHealth = 0;
+
+        }
     }
 }
