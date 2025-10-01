@@ -2,22 +2,22 @@ public class Character {
     private final int maxHealth;
     private int currentHealth;
     private final String name;
-
+   public Character(String name , int maxHealth){
+        this.maxHealth = maxHealth;
+        this.currentHealth = maxHealth;
+        this.name = name;
+    }
     public int getmaxHealth(){
         return this.maxHealth;
     }
-    public int getcurrentHealth(){
+    public int getcurrentHealth() {
         return this.currentHealth;
     }
     public String getname(){
        return this.name;
     }
   
-    public Character(String name , int maxHealth){
-        this.maxHealth = maxHealth;
-        this.currentHealth = maxHealth;
-        this.name = name;
-    }
+ 
     // @Override
     public String toString(){
         if (currentHealth <= 0 ){
