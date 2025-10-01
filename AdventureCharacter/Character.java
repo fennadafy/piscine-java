@@ -1,6 +1,6 @@
 public class Character {
     private final int maxHealth;
-    public int currentHealth;
+    private int currentHealth;
     private final String name;
 
     public int getmaxHealth(){
@@ -14,7 +14,6 @@ public class Character {
     }
   
     public Character(String name , int maxHealth){
-        // System.out.println("llll");
         this.maxHealth = maxHealth;
         this.currentHealth = maxHealth;
         this.name = name;
