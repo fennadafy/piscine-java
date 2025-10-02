@@ -1,8 +1,8 @@
 public class ExerciseRunner {
 
     public static void main(String[] args) {
-        Templar alistair = new Templar("Alistair", 20, 5, 4);
-        Templar roderick = new Templar("Roderick", 10, 3, 2);
+        Templar alistair = new Templar("Dumbledore", 30, 8, 4);
+        Templar roderick = new Templar("Ron Weasley", 10, 1, 2);
 
         Character.fight(alistair, roderick);
 

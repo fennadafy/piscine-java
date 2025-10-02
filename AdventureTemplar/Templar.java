@@ -26,7 +26,7 @@ public class Templar extends Character implements Healer , Tank {
     public String toString() {
         if (getCurrentHealth() <= 0){
         // return getName() + " has been beaten, even with its "+ shield + " shield. So bad, it could heal " + healCapacity + " HP and has a shield of "+shield  ;
-        return getName() +" has been beaten, even with its " + shield + "shield. So bad, it could heal " + healCapacity +" HP.";
+        return getName() +" has been beaten, even with its " + shield + " shield. So bad, it could heal " + healCapacity +" HP.";
         }
         // return getName() + " is a strong Templar with " + getCurrentHealth() + " HP. It can heal " + this.healCapacity + " HP.";
         return getName() + "is a strong Templar with " + getCurrentHealth()+" HP. It can heal " + healCapacity + " HP and has a shield of " + shield + " .";
@@ -34,11 +34,3 @@ public class Templar extends Character implements Healer , Tank {
 
 }
 
-// @Override
-// public String toString() {
-//     if (this.getHealth() <= 0) {
-//         return name + " has been beaten, even with its " + shield + " shield. So bad, it could heal " + healCapacity + " HP and has a shield of " + shield;
-//     } else {
-//         return name + " is a strong Templar with " + health + " HP. It can heal " + healCapacity + " HP and has a shield of " + shield + ".";
-//     }
-// }
