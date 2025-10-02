@@ -10,14 +10,19 @@ public class Sorcerer extends Character implements Healer {
         return healCapacity;
     }
 
-    public void heal(Character character){
-        int current = character.getCurrentHealth();
-        if (this.getHealCapacity() + current <= character.getMaxHealth()) {
-            character.setCurrentHealth(healCapacity + current);
+    public void heal(Character character) {
+
+        int current = character.getCurrentHealth() +healCapacity ;
+
+
+        if (current > character.getMaxHealth()) {
+            character.setCurrentHealth(character.getMaxHealth());
         } else {
-            setCurrentHealth(character.getMaxHealth());
+            character.setCurrentHealth(current);
         }
-   
+
+        // System.out.println(character.getMaxHealth());
+        // System.out.println(current );
     }
 
     @Override
@@ -25,6 +30,6 @@ public class Sorcerer extends Character implements Healer {
         if (getCurrentHealth() == 0){
             return getName() + " is a dead sorcerer. So bad, it could heal "+ this.healCapacity + " HP.";
         }
-        return getName() + " is a sorcerer with " + getCurrentHealth() + " HP. It can heal " + this.healCapacity +" HP.";
+        return getName() + " is a sorcerer with " + getCurrentHealth() + " HP. It can heal " + this.healCapacity + " HP.";
     }
 }
