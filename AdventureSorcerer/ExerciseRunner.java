@@ -6,7 +6,6 @@ public class ExerciseRunner {
         Sorcerer saroumane = new Sorcerer("saroumane", 10, 3);
 
         Character.fight(frodon, saroumane);
-        
         gandalf.heal(frodon);
 
         System.out.println(Character.printStatus());

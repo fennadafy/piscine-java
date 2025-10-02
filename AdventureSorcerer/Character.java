@@ -48,8 +48,8 @@ public class Character {
     public int getCurrentHealth() {
         return this.currentHealth;
     }
-    public void setCurrentHealth(int CurrentHealth){
-        this.currentHealth += CurrentHealth;
+   public void setCurrentHealth(int CurrentHealth){
+        this.currentHealth = CurrentHealth;
     }
     public String getName(){
        return this.name;
