@@ -13,8 +13,10 @@ public class Templar extends Character implements Healer , Tank {
      public int getShield(){
         return shield;
     }
+
     public void heal(Character c){
-        int current = c.getCurrentHealth() + healCapacity;
+        System.out.println(c.getCurrentHealth());
+       int current = c.getCurrentHealth() + healCapacity ;
 
         if (current > c.getMaxHealth()) {
             c.setCurrentHealth(c.getMaxHealth());
@@ -22,6 +24,7 @@ public class Templar extends Character implements Healer , Tank {
             c.setCurrentHealth(current);
         }
     }
+
     @Override
     public String toString() {
         if (getCurrentHealth() <= 0){
@@ -29,8 +32,7 @@ public class Templar extends Character implements Healer , Tank {
         return getName() +" has been beaten, even with its " + shield + " shield. So bad, it could heal " + healCapacity +" HP.";
         }
         // return getName() + " is a strong Templar with " + getCurrentHealth() + " HP. It can heal " + this.healCapacity + " HP.";
-        return getName() + " is a strong Templar with " + getCurrentHealth()+" HP. It can heal " + healCapacity + " HP and has a shield of " + shield + " .";
+        return getName() + " is a strong Templar with " + getCurrentHealth() +" HP. It can heal " + healCapacity + " HP and has a shield of " + shield + ".";
     }
-
 }
 
