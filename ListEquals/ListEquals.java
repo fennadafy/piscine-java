@@ -6,8 +6,8 @@ public class ListEquals {
           if ( list1 != null || list2 != null){
             return false;
         }
-        if ( list1.isEmpty() || list2.isEmpty()){
-            return false;
+        if ( list1.isEmpty() && list2.isEmpty()){
+            return true;
         }
         return list1.equals(list2);
     }
