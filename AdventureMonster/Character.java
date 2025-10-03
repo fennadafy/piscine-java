@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Character {
     private final int maxHealth;
-    private int currentHealth;
+    public int currentHealth;
     private final String name;
     private static List<Character> allCharacters = new ArrayList<>();
 
@@ -34,10 +34,13 @@ public class Character {
                     return c1;
                 }
             c2.attack(c1);
+            if (c1.currentHealth <=0) {
+                return c2;
+            }
         }
-        if (c1.currentHealth <=0) {
-            return c2;
-        }
+           if (c1.currentHealth <=0) {
+                return c2;
+            }
             return c1;
     }
 
@@ -49,6 +52,10 @@ public class Character {
         return this.currentHealth;
     }
 
+    public void setCurrentHealth(int CurrentHealth){
+        this.currentHealth = CurrentHealth;
+    }
+
     public String getName(){
        return this.name;
     }
@@ -57,7 +64,7 @@ public class Character {
         if (currentHealth <= 0 ){
             return name + " : KO";
         }
-        return name + " : "+currentHealth + "/"+ maxHealth;
+        return name + " : "+ currentHealth + "/"+ maxHealth;
     }
 
     public void attack(Character character){

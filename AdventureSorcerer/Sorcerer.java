@@ -3,7 +3,7 @@ public class Sorcerer extends Character implements Healer {
 
     public Sorcerer(String name,int maxHealth,int healCapacity){
         super(name, maxHealth);
-            this.healCapacity = healCapacity;
+        this.healCapacity = healCapacity;
     }
 
     public int getHealCapacity(){
